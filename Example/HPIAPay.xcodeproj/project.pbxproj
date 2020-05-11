@@ -28,7 +28,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6989EB3A86AE100419755908 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7E91924674FA9ACFF396A7FB /* Pods-HPIAPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPIAPay_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HPIAPay_Tests/Pods-HPIAPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		80202C5DA8E547DD773A6111 /* HPIAPay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HPIAPay.podspec; path = ../HPIAPay.podspec; sourceTree = "<group>"; };
+		80202C5DA8E547DD773A6111 /* HPIAPay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HPIAPay.podspec; path = ../HPIAPay.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A04EDA17CA774320F4E7BCB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		92F348088267F25931A182CD /* Pods_HPIAPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPIAPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */

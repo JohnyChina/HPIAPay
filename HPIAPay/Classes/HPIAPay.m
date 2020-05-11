@@ -13,13 +13,25 @@ typedef void(^RequestCompleteBlock)(NSArray <HPIAPProduct *>*products,NSError *e
 typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
 
 @interface HPIAPay () <SKPaymentTransactionObserver,SKProductsRequestDelegate>// 2.设置代理服务
-
 @property (nonatomic,copy) RequestCompleteBlock requestCallBackBlock;
 @property (nonatomic,copy) PayCompleteBlock payCallBackBlock;
 @property (nonatomic,strong) NSArray <SKProduct *> *productsAry;
+@property (nonatomic) BOOL isUsable;
 @end
 
 @implementation HPIAPay
+
++ (HPIAPay *)shareInstance {
+    @synchronized (self) {
+        static HPIAPay *_manager = nil;
+        static dispatch_once_t oncePredicate;
+        dispatch_once(&oncePredicate, ^{
+            _manager = [[HPIAPay alloc] init];
+            _manager.isUsable = NO;
+        });
+        return _manager;
+    }
+}
 
 - (instancetype)init {
     self = [super init];
@@ -28,6 +40,15 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     }
     return self;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    return [[[self class] alloc] init];
+}
+
+
+- (void)setLogUsable:(BOOL)usable {
+    self.isUsable = usable;
 }
 
 //4.结束后一定要销毁
@@ -127,12 +148,12 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
     if (self.requestCallBackBlock != nil) {
         self.requestCallBackBlock(nil, error);
     }
-    NSLog(@"---error:%@", error);
+    if(_isUsable) NSLog(@"---error:%@", error);
 }
 
 //反馈请求的产品信息结束后
 - (void)requestDidFinish:(SKRequest *)request{
-    NSLog(@"---请求产品信息已结束");
+    if(_isUsable) NSLog(@"---请求产品信息已结束");
 }
 
 #pragma mark - SKPaymentTransactionObserver
@@ -142,7 +163,7 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
     for(SKPaymentTransaction *tran in transaction){
         switch (tran.transactionState) {
             case SKPaymentTransactionStatePurchasing:
-                NSLog(@"---商品加入列表，正在购买中...");
+                if(_isUsable) NSLog(@"---商品加入列表，正在购买中...");
                 break;
             case SKPaymentTransactionStatePurchased: {
                 [queue finishTransaction:tran];
@@ -159,7 +180,7 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
                 break;
             }
             case SKPaymentTransactionStateFailed: {
-                NSLog(@"----StateFailed error = %@",tran.error);
+                if(_isUsable) NSLog(@"----StateFailed error = %@",tran.error);
                 [queue finishTransaction:tran];
                 if (self.payCallBackBlock != nil) {
                     self.payCallBackBlock(false, tran.error.description);
@@ -167,7 +188,7 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
                 break;
             }
             default: {
-                NSLog(@"----error = %@",tran.error);
+                if(_isUsable) NSLog(@"----error = %@",tran.error);
                 [queue finishTransaction:tran];
                 if (self.payCallBackBlock != nil) {
                     self.payCallBackBlock(false, tran.error.description);
@@ -223,13 +244,13 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
 #else
     verifyUrlString = @"https://buy.itunes.apple.com/verifyReceipt";
 #endif
-    
+    __weak typeof(self) weakSelf = self;
     NSURL *url = [NSURL URLWithString:verifyUrlString];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) { // 当前是子线程.
         
         if (error) {
-            NSLog(@"---error:%@ %ld", error.localizedDescription,(long)error.code);
+            if(weakSelf.isUsable) NSLog(@"---error:%@ %ld", error.localizedDescription,(long)error.code);
             completeBlcok(nil,error);
         }else if (data != nil && [data isKindOfClass:[NSNull class]] == NO) {
             NSError *err;
@@ -247,7 +268,7 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
             
         }else {
             completeBlcok(nil,nil);
-            NSLog(@"---httpAsynchronousRequest:异步返回信息错误");
+            if(weakSelf.isUsable) NSLog(@"---httpAsynchronousRequest:异步返回信息错误");
         }
     }];
     [task resume];
@@ -286,7 +307,7 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
     
     NSString *str = [[NSString alloc]initWithData:transaction.transactionReceipt encoding:NSUTF8StringEncoding];
     NSString *environment = [self environmentForReceipt:str];
-    NSLog(@"----- 完成交易调用的方法completeTransaction 1--------%@",environment);
+    if(_isUsable) NSLog(@"----- 完成交易调用的方法completeTransaction 1--------%@",environment);
     NSURL *StoreURL=nil;
     if ([environment isEqualToString:@"environment=Sandbox"]) {
         StoreURL= [[NSURL alloc] initWithString: @"https://sandbox.itunes.apple.com/verifyReceipt"];

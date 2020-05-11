@@ -30,48 +30,42 @@
 #define APPSTORE_ASK_TO_BUY_IN_SANDBOX 0
 
 @class HPIAPProduct;
-
 @interface HPIAPay : NSObject
 
-/**
- 判断app是否允许apple支付
+/// 单列对象HPIAPay
++ (HPIAPay *)shareInstance;
 
- @return 结果 YES=支持，NO=不支持
- */
+
+/// 设置log是否可用
+/// @param usable 默认NO
+- (void)setLogUsable:(BOOL)usable;
+
+
+///  判断app是否允许apple支付
 - (BOOL)canMakePayments;
 
-/**
- 请求苹果后台商品
 
- @param indentifiers 商品ID
- @param completeblock 请求商品结果
- */
+/// 请求苹果后台商品
+/// @param indentifiers 商品ID
+/// @param completeblock 请求商品结果，通过products获取商品列表
 - (void)productsWithIdentifier:(NSArray * _Nonnull)indentifiers
                       complete:(void(^_Nullable)(NSArray <HPIAPProduct * >* _Nullable products,NSError * _Nonnull error))completeblock;
 
-/**
- 发送购买请求
 
- @param product <HPIAPProduct *>产品模型
- @param resultBlock 支付结果
- */
+/// 发起购买申请
+/// @param product  <HPIAPProduct *>产品模型对象
+/// @param resultBlock 支付结果
 - (void)payWithProduct:(HPIAPProduct *_Nonnull )product
                 result:(void(^_Nullable)(bool succeeded, NSString * _Nullable errorMessage))resultBlock;
 
 
-/**
- 交易成功后获取收据,已格式化。
-
- @return 返回值k是通过json格式化{"receipt-data":base64(receipt)}，可直接上传苹果服务器进行鉴定。
- */
+/// 交易成功后获取收据,已格式化。返回值k是通过json格式化{"receipt-data":base64(receipt)}，可直接上传苹果服务器进行鉴定。
 - (NSData * _Nonnull)fetchReceipt;
 
-/**
- 检验收据的正确性，客户端向苹果服务器发起请求验证信息，并将结果json格式化返回。
 
- @param data 收据数据，每次交易成功后通过实例方法fetchReceipt获得。
- @param completeBlcok 子线程中返回验证结果
- */
+/// 检验收据的正确性。客户端向苹果服务器发起请求验证信息，并将结果json格式化返回。
+/// @param data 收据数据。每次交易成功后通过实例方法fetchReceipt获得。
+/// @param completeBlcok 子线程中返回验证结果
 - (void)verifyTransactionWithReceiptData:(NSData *_Nonnull)data complete:(void (^_Nullable)(NSDictionary * _Nullable dict, NSError * _Nullable error))completeBlcok;
 
 

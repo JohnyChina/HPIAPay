@@ -1,0 +1,6 @@
+use_frameworks!
+target 'HPIAPay_Tests' do
+  pod 'HPIAPay', :path => '../'
+  
+  
+end

@@ -1,0 +1,6 @@
+framework module HPIAPay {
+  umbrella header "HPIAPay-umbrella.h"
+
+  export *
+  module * { export * }
+}

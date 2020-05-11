@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05E33FE3B01F0A4F856CEBEEE639EB68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1CB203395AC431C487308D52E3CC4167 /* HPIAPay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 834632248C795949F901F793B98784AD /* HPIAPay-dummy.m */; };
+		224444CD64485C710B77EDDC65DD9382 /* Pods-HPIAPay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C844B6D60CB69FF9E53522A7C74B61F /* Pods-HPIAPay_Tests-dummy.m */; };
+		372F48F1A29F4327CBA4AACDD77BFEBF /* HPIAPay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94C523232F5FDB619DF57AB116DDB8F2 /* HPIAPay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53253C6E31B5B0B83BD0123CB8B78144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		83E0FCC1DC1473C835F32157F5F1FD24 /* Pods-HPIAPay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D277029C287616B3E3F5CF3D9CDF9CE9 /* Pods-HPIAPay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9711B3652591C0BED9D163BCBE40862E /* HPIAPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2A3413973C077379D5F26205EC18E3 /* HPIAPay.m */; };
+		C72068CADD0F9CB1436B3F1A479C6F99 /* HPIAPay.h in Headers */ = {isa = PBXBuildFile; fileRef = 2567364AF97DE15A40C4437C5ED44774 /* HPIAPay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DF59E3D39E14163DD87AAB799C3D4D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76C61A696C5DB1E90AE1BAB7333B1F0B;
+			remoteInfo = HPIAPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04F25B739005FCFB55719888B33A7F9A /* Pods-HPIAPay_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HPIAPay_Tests-Info.plist"; sourceTree = "<group>"; };
+		10FF701C31F91BB0AFE6383228CADECD /* HPIAPay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HPIAPay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2567364AF97DE15A40C4437C5ED44774 /* HPIAPay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPIAPay.h; path = HPIAPay/Classes/HPIAPay.h; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		38A1C3641A7E152CA7A38ACDD05C0E37 /* Pods-HPIAPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HPIAPay_Tests.modulemap"; sourceTree = "<group>"; };
+		4F2A3413973C077379D5F26205EC18E3 /* HPIAPay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HPIAPay.m; path = HPIAPay/Classes/HPIAPay.m; sourceTree = "<group>"; };
+		535C08ABF9CE4244D7E7874063639889 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		62D170BACB8C8FDA11A4012E6655730D /* HPIAPay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HPIAPay-prefix.pch"; sourceTree = "<group>"; };
+		66F0AFB3DD50019249E2EB654D2A6DC2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		71924313D73003EBA7EDCB945D0272F0 /* Pods_HPIAPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HPIAPay_Tests.framework; path = "Pods-HPIAPay_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		834632248C795949F901F793B98784AD /* HPIAPay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HPIAPay-dummy.m"; sourceTree = "<group>"; };
+		94C523232F5FDB619DF57AB116DDB8F2 /* HPIAPay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HPIAPay-umbrella.h"; sourceTree = "<group>"; };
+		9C844B6D60CB69FF9E53522A7C74B61F /* Pods-HPIAPay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HPIAPay_Tests-dummy.m"; sourceTree = "<group>"; };
+		9D92AF339E277311F4707BB5B8C64CB1 /* Pods-HPIAPay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HPIAPay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7C854AA4D496470001B6F784CB965A4 /* Pods-HPIAPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPIAPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA3F008DD8232FC899B114158CA71F9E /* HPIAPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HPIAPay.debug.xcconfig; sourceTree = "<group>"; };
+		BADABBB1D79EB3E6179995EFED7F5183 /* Pods-HPIAPay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HPIAPay_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C2A958CC45F86FCCE5172CB27650216D /* HPIAPay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HPIAPay-Info.plist"; sourceTree = "<group>"; };
+		C8023BC164520FBFF7FF1E505F710D71 /* HPIAPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HPIAPay.framework; path = HPIAPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D277029C287616B3E3F5CF3D9CDF9CE9 /* Pods-HPIAPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HPIAPay_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D30BBD852BBDEBF4AE119B6E6BB4A2B9 /* HPIAPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HPIAPay.release.xcconfig; sourceTree = "<group>"; };
+		DD86BB198A65BD576E85ABF21C6A2375 /* Pods-HPIAPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HPIAPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E3D13903BC68BC76DC44A4C9BA91DD83 /* HPIAPay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HPIAPay.modulemap; sourceTree = "<group>"; };
+		EB97448FCCAD33DA9C1CD7BB7A5A71ED /* Pods-HPIAPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPIAPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		630D9581F3141B14788066D57B7AF19C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53253C6E31B5B0B83BD0123CB8B78144 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93A97D784F29366881731A0B2D9BF2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E33FE3B01F0A4F856CEBEEE639EB68 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		144C4AC9AB0364424C7270B9C6188CB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3D13903BC68BC76DC44A4C9BA91DD83 /* HPIAPay.modulemap */,
+				834632248C795949F901F793B98784AD /* HPIAPay-dummy.m */,
+				C2A958CC45F86FCCE5172CB27650216D /* HPIAPay-Info.plist */,
+				62D170BACB8C8FDA11A4012E6655730D /* HPIAPay-prefix.pch */,
+				94C523232F5FDB619DF57AB116DDB8F2 /* HPIAPay-umbrella.h */,
+				AA3F008DD8232FC899B114158CA71F9E /* HPIAPay.debug.xcconfig */,
+				D30BBD852BBDEBF4AE119B6E6BB4A2B9 /* HPIAPay.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HPIAPay";
+			sourceTree = "<group>";
+		};
+		2315BFA5F24E88ED4940A0AD71B1E976 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6A44A665E860BAAD4B8401D7543BF91 /* HPIAPay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		407DF9D5B09AA0EC9288DF24325C3987 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8023BC164520FBFF7FF1E505F710D71 /* HPIAPay.framework */,
+				71924313D73003EBA7EDCB945D0272F0 /* Pods_HPIAPay_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AFC944E748720D00381E9CC410A6D1F /* Pods-HPIAPay_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				38A1C3641A7E152CA7A38ACDD05C0E37 /* Pods-HPIAPay_Tests.modulemap */,
+				DD86BB198A65BD576E85ABF21C6A2375 /* Pods-HPIAPay_Tests-acknowledgements.markdown */,
+				9D92AF339E277311F4707BB5B8C64CB1 /* Pods-HPIAPay_Tests-acknowledgements.plist */,
+				9C844B6D60CB69FF9E53522A7C74B61F /* Pods-HPIAPay_Tests-dummy.m */,
+				BADABBB1D79EB3E6179995EFED7F5183 /* Pods-HPIAPay_Tests-frameworks.sh */,
+				04F25B739005FCFB55719888B33A7F9A /* Pods-HPIAPay_Tests-Info.plist */,
+				D277029C287616B3E3F5CF3D9CDF9CE9 /* Pods-HPIAPay_Tests-umbrella.h */,
+				A7C854AA4D496470001B6F784CB965A4 /* Pods-HPIAPay_Tests.debug.xcconfig */,
+				EB97448FCCAD33DA9C1CD7BB7A5A71ED /* Pods-HPIAPay_Tests.release.xcconfig */,
+			);
+			name = "Pods-HPIAPay_Tests";
+			path = "Target Support Files/Pods-HPIAPay_Tests";
+			sourceTree = "<group>";
+		};
+		5E138005ECB99343D58A3F0995521F26 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				10FF701C31F91BB0AFE6383228CADECD /* HPIAPay.podspec */,
+				535C08ABF9CE4244D7E7874063639889 /* LICENSE */,
+				66F0AFB3DD50019249E2EB654D2A6DC2 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A6A44A665E860BAAD4B8401D7543BF91 /* HPIAPay */ = {
+			isa = PBXGroup;
+			children = (
+				2567364AF97DE15A40C4437C5ED44774 /* HPIAPay.h */,
+				4F2A3413973C077379D5F26205EC18E3 /* HPIAPay.m */,
+				5E138005ECB99343D58A3F0995521F26 /* Pod */,
+				144C4AC9AB0364424C7270B9C6188CB0 /* Support Files */,
+			);
+			name = HPIAPay;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				2315BFA5F24E88ED4940A0AD71B1E976 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				407DF9D5B09AA0EC9288DF24325C3987 /* Products */,
+				FB45DC894F0A2236081DD37CA9C933FA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB45DC894F0A2236081DD37CA9C933FA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC944E748720D00381E9CC410A6D1F /* Pods-HPIAPay_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D505507F5D6E7F5570ECA44D05EAFC7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E0FCC1DC1473C835F32157F5F1FD24 /* Pods-HPIAPay_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761C7F0E974762D436875D1C31625201 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372F48F1A29F4327CBA4AACDD77BFEBF /* HPIAPay-umbrella.h in Headers */,
+				C72068CADD0F9CB1436B3F1A479C6F99 /* HPIAPay.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		39D0DAFBB11CCBE9FFDA4543694B8055 /* Pods-HPIAPay_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1A36A0A8F4DA35DD54565CF99A212BD /* Build configuration list for PBXNativeTarget "Pods-HPIAPay_Tests" */;
+			buildPhases = (
+				1D505507F5D6E7F5570ECA44D05EAFC7 /* Headers */,
+				13BF735D6AEC8B8E73FC94918A152085 /* Sources */,
+				93A97D784F29366881731A0B2D9BF2D7 /* Frameworks */,
+				0DBA657A85241EE6A2357A28447F2EA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1FB0E7D671AD19A57DDBB5083FB98F2 /* PBXTargetDependency */,
+			);
+			name = "Pods-HPIAPay_Tests";
+			productName = "Pods-HPIAPay_Tests";
+			productReference = 71924313D73003EBA7EDCB945D0272F0 /* Pods_HPIAPay_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		76C61A696C5DB1E90AE1BAB7333B1F0B /* HPIAPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 732347134EA41833EC6AD556224E106A /* Build configuration list for PBXNativeTarget "HPIAPay" */;
+			buildPhases = (
+				761C7F0E974762D436875D1C31625201 /* Headers */,
+				5519E4ACA004933FA43342383F4B5F6E /* Sources */,
+				630D9581F3141B14788066D57B7AF19C /* Frameworks */,
+				BA44745C62E479DD2C2C4D87FDFDD40D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPIAPay;
+			productName = HPIAPay;
+			productReference = C8023BC164520FBFF7FF1E505F710D71 /* HPIAPay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 407DF9D5B09AA0EC9288DF24325C3987 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76C61A696C5DB1E90AE1BAB7333B1F0B /* HPIAPay */,
+				39D0DAFBB11CCBE9FFDA4543694B8055 /* Pods-HPIAPay_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DBA657A85241EE6A2357A28447F2EA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA44745C62E479DD2C2C4D87FDFDD40D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13BF735D6AEC8B8E73FC94918A152085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224444CD64485C710B77EDDC65DD9382 /* Pods-HPIAPay_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5519E4ACA004933FA43342383F4B5F6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB203395AC431C487308D52E3CC4167 /* HPIAPay-dummy.m in Sources */,
+				9711B3652591C0BED9D163BCBE40862E /* HPIAPay.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1FB0E7D671AD19A57DDBB5083FB98F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HPIAPay;
+			target = 76C61A696C5DB1E90AE1BAB7333B1F0B /* HPIAPay */;
+			targetProxy = 4DF59E3D39E14163DD87AAB799C3D4D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6791A2B8B69FF336AF5446C57EC911A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C854AA4D496470001B6F784CB965A4 /* Pods-HPIAPay_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HPIAPay_Tests/Pods-HPIAPay_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HPIAPay_Tests/Pods-HPIAPay_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6CF20FDED1DB56C8A2213312A8950523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB97448FCCAD33DA9C1CD7BB7A5A71ED /* Pods-HPIAPay_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HPIAPay_Tests/Pods-HPIAPay_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HPIAPay_Tests/Pods-HPIAPay_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A48859F84FD0BEDC9ED17B019DFD6D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D30BBD852BBDEBF4AE119B6E6BB4A2B9 /* HPIAPay.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HPIAPay/HPIAPay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HPIAPay/HPIAPay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HPIAPay/HPIAPay.modulemap";
+				PRODUCT_MODULE_NAME = HPIAPay;
+				PRODUCT_NAME = HPIAPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C62822855BA3C391C89C05076C9CBC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA3F008DD8232FC899B114158CA71F9E /* HPIAPay.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HPIAPay/HPIAPay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HPIAPay/HPIAPay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HPIAPay/HPIAPay.modulemap";
+				PRODUCT_MODULE_NAME = HPIAPay;
+				PRODUCT_NAME = HPIAPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		732347134EA41833EC6AD556224E106A /* Build configuration list for PBXNativeTarget "HPIAPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62822855BA3C391C89C05076C9CBC85 /* Debug */,
+				9A48859F84FD0BEDC9ED17B019DFD6D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1A36A0A8F4DA35DD54565CF99A212BD /* Build configuration list for PBXNativeTarget "Pods-HPIAPay_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6791A2B8B69FF336AF5446C57EC911A8 /* Debug */,
+				6CF20FDED1DB56C8A2213312A8950523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

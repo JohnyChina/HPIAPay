@@ -29,6 +29,8 @@
 // 苹果内购是否为沙盒测试账号,打开就代表为沙盒测试账号,注意上线时注释掉
 #define APPSTORE_ASK_TO_BUY_IN_SANDBOX 0
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class HPIAPProduct;
 @interface HPIAPay : NSObject
 
@@ -48,14 +50,14 @@
 /// 请求苹果后台商品
 /// @param indentifiers 商品ID
 /// @param completeblock 请求商品结果，通过products获取商品列表
-- (void)productsWithIdentifier:(NSArray * _Nonnull)indentifiers
-                      complete:(void(^_Nullable)(NSArray <HPIAPProduct * >* _Nullable products,NSError * _Nonnull error))completeblock;
+- (void)productsWithIdentifier:(NSArray *)indentifiers
+                      complete:(void(^_Nullable)(NSArray <HPIAPProduct * >* _Nullable products,NSError *error))completeblock;
 
 
 /// 发起购买申请
 /// @param product  <HPIAPProduct *>产品模型对象
 /// @param resultBlock 支付结果
-- (void)payWithProduct:(HPIAPProduct *_Nonnull )product
+- (void)payWithProduct:(HPIAPProduct *)product
                 result:(void(^_Nullable)(bool succeeded, NSString * _Nullable errorMessage))resultBlock;
 
 
@@ -66,12 +68,12 @@
 /// 检验收据的正确性。客户端向苹果服务器发起请求验证信息，并将结果json格式化返回。
 /// @param data 收据数据。每次交易成功后通过实例方法fetchReceipt获得。
 /// @param completeBlcok 子线程中返回验证结果
-- (void)verifyTransactionWithReceiptData:(NSData *_Nonnull)data complete:(void (^_Nullable)(NSDictionary * _Nullable dict, NSError * _Nullable error))completeBlcok;
+- (void)verifyTransactionWithReceiptData:(NSData *)data complete:(void (^_Nullable)(NSDictionary * _Nullable dict, NSError * _Nullable error))completeBlcok;
 
 
 @end
 
-NS_ASSUME_NONNULL_BEGIN
+
 @interface HPIAPProduct : NSObject
 @property (nonatomic,copy) NSString *desc;                  // 产品描述
 @property (nonatomic,copy) NSString *localizedTitle;        // 产品标题
@@ -79,4 +81,5 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSNumber *price;                 // 额度（没有单位）
 @property (nonatomic,copy) NSString *productIdentifier;     // 产品唯一标识符
 @end
+
 NS_ASSUME_NONNULL_END

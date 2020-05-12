@@ -43,7 +43,7 @@ typedef void(^PayCompleteBlock)(bool succeeded, NSString *errorMessage);
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
-    return [[[self class] alloc] init];
+    return [HPIAPay shareInstance];
 }
 
 
